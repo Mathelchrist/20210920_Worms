@@ -8,6 +8,10 @@ public class Worms {
 	private boolean alive = true;
 	private int team;
 	
+	public Worms() {};
+	public Worms(int team) {
+		this.team = team;
+		};
 	
 	public int getTeam() {
 		return team;
@@ -23,6 +27,9 @@ public class Worms {
 	}
 	public int getDamage() {
 		return damage;
+	}
+	public void setDamage(int damage) {
+		this.damage = damage;
 	}
 	public boolean isAlive() {
 		return alive;

@@ -16,7 +16,7 @@ public class Tournament {
 		int j = 0;
 
 		while (team1[4].isAlive() && team2[4].isAlive()) {
-
+//equipe 1 attaque
 			team2[j].setHp(team2[j].getHp()-team1[i].getDamage()); //attaque effectué
 			if(team2[j].getHp() < 1) {							//controle si worms en vie
 				int bonusLife = (int) (team1[i].getHp()*0.20); //augmentation des hp
@@ -30,7 +30,7 @@ public class Tournament {
 				System.out.println("l'equipe "+team1[i].getTeam()+" à tuer un worms, il reste "+ team1[i].getHp() +"hp au worms en vie, il a tué le worms numéro " + j +" de l'equipe 2" );
 
 			}
-
+//equipe 2 attaque
 			team1[i].setHp(team1[i].getHp()-team2[j].getDamage());
 			if(team1[i].getHp() < 1) {
 				int bonusLife = (int) (team2[j].getHp()*0.20);

@@ -2,10 +2,10 @@ import java.lang.Math;
 import java.util.Objects;
 
 public class Worms {
-	int hps = (int)(Math.random()*(120-80+1)+80);  
-	private int hp = hps;
-	int damages = (int)(Math.random()*(40-20+1)+20);  
-	private int damage = damages;
+	
+	private int hp = (int)(Math.random()*(120-80+1)+80);
+	private int damage = (int)(Math.random()*(40-20+1)+20);
+	
 	private boolean alive = true;
 	private int team;
 	
@@ -41,7 +41,7 @@ public class Worms {
 	
 	@Override
 	public int hashCode() {
-		return Objects.hash(alive, damage, damages, hp, hps, team);
+		return Objects.hash(alive, damage, hp, team);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -52,8 +52,8 @@ public class Worms {
 		if (getClass() != obj.getClass())
 			return false;
 		Worms other = (Worms) obj;
-		return alive == other.alive && damage == other.damage && damages == other.damages && hp == other.hp
-				&& hps == other.hps && team == other.team;
+		return alive == other.alive && damage == other.damage && hp == other.hp && team == other.team;
 	}
+	
 	
 }

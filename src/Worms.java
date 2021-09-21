@@ -1,4 +1,5 @@
 import java.lang.Math;
+import java.util.Objects;
 
 public class Worms {
 	int hps = (int)(Math.random()*(120-80+1)+80);  
@@ -36,6 +37,23 @@ public class Worms {
 	}
 	public void setAlive(boolean alive) {
 		this.alive = alive;
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(alive, damage, damages, hp, hps, team);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Worms other = (Worms) obj;
+		return alive == other.alive && damage == other.damage && damages == other.damages && hp == other.hp
+				&& hps == other.hps && team == other.team;
 	}
 	
 }

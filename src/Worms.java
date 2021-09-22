@@ -5,11 +5,11 @@ public class Worms {
 	
 	private int hp = (int)(Math.random()*(120-80+1)+80);
 	private int damage = (int)(Math.random()*(40-20+1)+20);
-	
 	private boolean alive = true;
 	private int team;
 	
 	public Worms() {};
+	
 	public Worms(int team) {
 		this.team = team;
 		};

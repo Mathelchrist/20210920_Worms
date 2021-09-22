@@ -10,7 +10,7 @@ public class Baston {
 				worms1.setHp(worms1.getHp()+bonusLife);
 				worms2.setAlive(false);
 				System.out.println("le worms 1 de l'equipe "+worms1.getTeam()+" à gagner, il lui reste "+ worms1.getHp() +"hp");
-	//			break;
+				//			break;
 			}
 			worms1.setHp(worms1.getHp()-worms2.getDamage());
 			if(worms1.getHp() < 1) {
@@ -18,7 +18,7 @@ public class Baston {
 				worms2.setHp(worms2.getHp()+bonusLife);
 				worms1.setAlive(false);
 				System.out.println("le worms 2 de l'equipe "+worms2.getTeam()+" à gagner, il lui reste "+ worms2.getHp()+"hp");
-	//			break;
+				//			break;
 			}
 		}
 	}

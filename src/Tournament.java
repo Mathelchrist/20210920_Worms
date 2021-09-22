@@ -1,25 +1,26 @@
 
 public class Tournament {
 	public static void main(String[] args) {
-		Worms[] team1;                                            // creation des equipes
-		Worms[] team2;
+	//	Worms[] team1;                                            // creation des equipes
+	//	Worms[] team2;
 
-
-		team1 = new Worms[5];
+	//	Worms toto = new Worms();          //chercher aide / indice methode
+		Worms[] team1 = new Worms[5];
 		for (int i=0; i<5;i++) {
 			team1[i] = new Worms(1);
 		}
-		team2 = new Worms[5];
+		Worms[] team2 = new Worms[5];
 		for (int j=0; j<5;j++) {
 			team2[j] = new Worms(2);
 		}
 		Tournament tournament = new Tournament();
 		tournament.baston(team1, team2);
 	}
-	public static String baston(Worms team1[], Worms team2[]) {
+	
+	public String baston(Worms team1[], Worms team2[]) {
 		int i = 0;
 		int j = 0;
-		String winner = "aucun";
+		String winner = "";
 		while (team1[4].isAlive() && team2[4].isAlive()) {
 			//equipe 1 attaque
 			team2[j].setHp(team2[j].getHp()-team1[i].getDamage()); //attaque effectué
